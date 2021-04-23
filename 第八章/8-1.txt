@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int x,y,z,n,b[10000],i,j,f;
+    char a[15]={'1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+    while(scanf("%d",&n)!=EOF)
+    {
+        x=n;
+        i=0;
+        f=0;
+        while(x!=0)
+        {
+            b[i]=x%16;
+            x=x/16;
+            i++;
+            f++;
+        }
+        for(j=f-1;j>=0;j--)
+        {
+            printf("%c",a[b[j]-1]);
+        }
+        printf("\n");
+    }
+}

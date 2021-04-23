@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+const double pi=3.14;
+
+double fv( double h,double r)
+{
+	double v;
+	v=h*pi*r*r/3;
+	return v;
+}
+
+double fs(double h,double r)
+{
+	double s;
+	s=pi*r*r+pi*r*sqrt(r*r+h*h);
+	return s;
+}
+
+int main()
+{
+	double r,h,s,v;
+	scanf("%lf%lf",&r,&h);
+	s=fs(h,r);
+	v=fv(h,r);
+	printf( "radius=%lf, height=%lf, Area of surface=%lf, Volume=%lf\n",r,h,s,v);
+
+	return 0;
+}
